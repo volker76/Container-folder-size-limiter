@@ -1,13 +1,10 @@
 #!/bin/bash
 
-DIR="/var/lib/docker/volumes/twitch_twitch/_data"
-SOMELIMIT=10
-
 while true; do
     
     DIRSIZE=$(du -shm $DIR | awk '{print $1}')
-    echo "$DIR is $DIRSIZE MegaBytes\n"
-    if [ "$DIRSIZE" -gt "$SOMELIMIT" ]
+    echo "$DIR is $DIRSIZE MegaBytes - limit is $DIRLIMIT\n"
+    if [ "$DIRSIZE" -gt "$DIRLIMIT" ]
     then
 	cd $DIR
 	ls -1t | tail -n 1  
