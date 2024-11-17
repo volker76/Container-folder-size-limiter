@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "checking $DIR - limit is $DIRLIMIT MBytes - timer is $timer sec"
+echo "checking $DIR for $EXTENSION - limit is $DIRLIMIT MBytes - timer is $timer sec"
     
 while true; do
     
