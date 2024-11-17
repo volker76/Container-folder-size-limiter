@@ -1,5 +1,6 @@
 #!/bin/bash
-
+echo "checking $DIR - limit is $DIRLIMIT\n"
+    
 while true; do
     
     DIRSIZE=$(du -shm $DIR | awk '{print $1}')
@@ -10,5 +11,5 @@ while true; do
 	ls -1t | tail -n 1  
 #	ls -1t | tail -n 1 | xargs -d '\n' rm -f
     fi
-    sleep 60
+    sleep $timer
 done
