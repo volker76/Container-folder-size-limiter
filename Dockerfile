@@ -5,6 +5,7 @@ ENV LANG=en_US.utf8
 COPY cleanup.sh /cleanup.sh
 RUN chmod +x /cleanup.sh
 ENV DIR=/data
+ENV EXTENSION="*.*"
 ENV DIRLIMIT=999999999
 ENV timer=60
 ENTRYPOINT ["/cleanup.sh"]

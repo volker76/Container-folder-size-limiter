@@ -8,8 +8,8 @@ while true; do
     if [ "$DIRSIZE" -gt "$DIRLIMIT" ]
     then
 	cd $DIR
-	ls -1t | tail -n 1  
-	ls -1t | tail -n 1 | xargs -d '\n' rm -f
+	ls -1t $EXTENSION | tail -n 1  
+	ls -1t $EXTENSION | tail -n 1 | xargs -d '\n' rm -f
     fi
     sleep $timer
 done
