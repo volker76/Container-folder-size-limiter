@@ -15,7 +15,7 @@ on:
   
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository }}
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   push_to_registry:
